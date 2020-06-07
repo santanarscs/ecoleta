@@ -16,6 +16,7 @@ interface Item {
 interface Point {
   id: number,
   image: string,
+  image_url: string,
   name: string,
   latitude: number,
   longitude: number,
@@ -112,7 +113,7 @@ const Points: React.FC = () => {
                   }}
                 >
                   <View style={styles.mapContainer}>
-                  <Image style={styles.mapMarkerImage} source={{ uri: point.image} }/>
+                  <Image style={styles.mapMarkerImage} source={{ uri: point.image_url} }/>
                   <Text style={styles.mapMarkerTitle}>{point.name}</Text>
                   </View>
                 </Marker>
